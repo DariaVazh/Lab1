@@ -37,7 +37,7 @@
 
  ```java
  class Main{
-            public static Scanner in = new Scanner(System.in);
+    public static Scanner in = new Scanner(System.in);
     public static PrintStream out = System.out;
     public static void main(String[] args) {
         int x = in.nextInt(); //ввод объема контейнера
@@ -78,4 +78,6 @@
         out.print(3-k); //найдем сколько человек не смогут выкинуть мусор в контейнер
     }    
  }
- ``` 
+ ```
+**6.Анализ правильности решения**
+
