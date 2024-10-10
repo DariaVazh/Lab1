@@ -57,6 +57,16 @@ uC -- Нет --> preEnd
 G -- Нет --> J{x>=c}
 J -- Да --> K[k = k + 1] 
 J -- Нет --> preEnd[/Вывести: 3 - k/]
+
+Z --> L{x>=b}
+L -- Да --> M[x = x - b]
+M --> O[k = k + 1]
+O --> P{x>=c}
+P -- Да --> Q[k = k + 1]
+Q --> preEnd
+L --Нет --> R{x>=c}
+R --> S[k = k + 1]
+S --> preEnd
 K --> preEnd
 preEnd --> End([Конец])
 ``` 
