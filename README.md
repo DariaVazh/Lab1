@@ -52,6 +52,7 @@ G -- Да --> H[x = x - b]
 H --> I[k = k + 1]
 I --> uC{x>=c}
 uC -- Да --> vc[k = k + 1]
+vc --> preEnd
 uC -- Нет --> preEnd
 G -- Нет --> J{x>=c}
 J -- Да --> K[k = k + 1] 
