@@ -45,7 +45,7 @@ A([Начало]) --> B[/Ввести: x, a, b, c/]
 B --> C[k = 0]
 C --> D{x>=a}
 D -- Да --> E[x= x - a]
-D -- Нет --> Z{x>=b}
+D -- Нет --> L{x>=b}
 E --> F[k = k + 1]
 F --> G{x>=b}
 G -- Да --> H[x = x - b]
@@ -58,14 +58,16 @@ G -- Нет --> J{x>=c}
 J -- Да --> K[k = k + 1] 
 J -- Нет --> preEnd[/Вывести: 3 - k/]
 
-Z --> L{x>=b}
+
 L -- Да --> M[x = x - b]
 M --> O[k = k + 1]
 O --> P{x>=c}
 P -- Да --> Q[k = k + 1]
 Q --> preEnd
+P -- Нет --> preEnd
 L --Нет --> R{x>=c}
-R --> S[k = k + 1]
+R --Да --> S[k = k + 1]
+R -- Нет --> preEnd
 S --> preEnd
 K --> preEnd
 preEnd --> End([Конец])
